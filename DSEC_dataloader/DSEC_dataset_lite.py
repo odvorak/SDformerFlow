@@ -141,7 +141,7 @@ class DSECDatasetLite(Dataset):
 if __name__ == "__main__":
     config = YAMLParser("../configs/train_DSEC_supervised_landing.yml").config
     config = YAMLParser.combine_entries(config)
-    config['data']['path'] = 'E:\\ALED_v30\\train\\saved_flow_data'
+    config['data']['path'] = '/root/saved_flow_data'
     config['data']['preprocessed'] = False
     config['model']['encoding'] = "list"
 
