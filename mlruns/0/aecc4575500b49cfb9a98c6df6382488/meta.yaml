@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Thesis/SDformerFlow/mlruns/0/aecc4575500b49cfb9a98c6df6382488/artifacts
+end_time: null
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: aecc4575500b49cfb9a98c6df6382488
+run_name: auspicious-squid-697
+run_uuid: aecc4575500b49cfb9a98c6df6382488
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739227187199
+status: 1
+tags: []
+user_id: ondre

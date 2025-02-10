@@ -1,0 +1,1 @@
+{'mode': 'events', 'window': 5000, 'path': 'data/Datasets/DSEC/saved_flow_data', 'preprocessed': True, 'num_frames': 10, 'num_chunks': 1, 'step_mode': 'm', 'spike_th': None}

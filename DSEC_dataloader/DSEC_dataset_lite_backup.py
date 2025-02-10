@@ -47,7 +47,7 @@ class DSECDatasetLite(Dataset):
         self.num_bins = self.num_frames_per_ts * self.num_chunks
         self.new_sequence = True
         if not config['data']['preprocessed']:
-            self.events_path = os.path.join(self.config['data']['path'], 'event_tensors', '11frames')
+            self.events_path = os.path.join(self.config['data']['path'], 'event_tensors', '01lists','left')
             # if (self.input == "voxel"):
             #     self.voxel_grid = VoxelGrid((self.num_bins, self.height, self.width))
         else:
@@ -139,9 +139,9 @@ class DSECDatasetLite(Dataset):
 
 
 if __name__ == "__main__":
-    config = YAMLParser("../configs/train_DSEC_supervised_landing.yml").config
+    config = YAMLParser("../configs/train_DSEC_supervised_Spikingformer.yml").config
     config = YAMLParser.combine_entries(config)
-    config['data']['path'] = 'E:\\ALED_v30\\train\\saved_flow_data'
+    config['data']['path'] = 'E:\ALED_v30\train\saved_flow_data_train'
     config['data']['preprocessed'] = False
     config['model']['encoding'] = "list"
 

@@ -1,0 +1,1 @@
+{'name': 'MS_SpikingformerFlowNet_en4', 'encoding': 'voxel', 'norm_input': 'minmax', 'num_bins': 10, 'base_num_channels': 96, 'kernel_size': 3, 'activations': ['relu', None], 'final_activation': None, 'mask_output': True, 'norm': None, 'use_upsample_conv': False}

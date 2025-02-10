@@ -1,0 +1,1 @@
+{'training': 'supervised', 'lambda_mod': 1, 'lambda_ang': 0, 'flow_regul_weight': 0.001, 'gamma': None, 'clip_grad': 100.0, 'overwrite_intermediate': False}

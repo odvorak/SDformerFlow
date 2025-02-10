@@ -499,7 +499,7 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--config",
-        default="configs/train_DSEC_supervised_SDformerFlow_en4.yml",
+        default="configs/train_DSEC_supervised_landing.yml",
         help="training configuration",
     )
     parser.add_argument(

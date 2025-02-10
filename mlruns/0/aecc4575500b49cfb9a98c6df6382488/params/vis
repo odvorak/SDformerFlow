@@ -1,0 +1,1 @@
+{'bars': False, 'verbose': False, 'enabled': False, 'px': 400, 'store_grads': False, 'store': False, 'mask_events': False, 'store_spike_rates': False}

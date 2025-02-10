@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Thesis/SDformerFlow/mlruns/0/caebba1387d14aea912cd8aeb94dc3e0/artifacts
+end_time: 1739226912915
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: caebba1387d14aea912cd8aeb94dc3e0
+run_name: exultant-ram-964
+run_uuid: caebba1387d14aea912cd8aeb94dc3e0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1739226909701
+status: 3
+tags: []
+user_id: ondre

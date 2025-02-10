@@ -1,0 +1,1 @@
+{'name': 'AdamW', 'lr': 0.0001, 'wd': 0.01, 'scheduler': 'multistep', 'milestones': [10, 20, 30, 40, 50, 70, 90, 120], 'use_amp': True, 'num_acc': 1}

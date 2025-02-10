@@ -1,0 +1,1 @@
+{'num_steps': 10, 'v_th': 0.1, 'v_reset': None, 'neuron_type': 'psn', 'surrogate_fun': 'surrogate.ATan()', 'tau': 2.0, 'detach_reset': True, 'spike_norm': 'BN'}

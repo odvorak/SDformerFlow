@@ -1,0 +1,1 @@
+{'mode': 'events', 'window': 5000, 'path': 'E:/ALED_v30/train/saved_flow_data', 'preprocessed': True, 'num_frames': 11, 'num_chunks': 1, 'step_mode': 'm', 'spike_th': None}
