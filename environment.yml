@@ -1,0 +1,28 @@
+name: sdff
+channels:
+  - conda-forge
+  - defaults
+  - pytorch
+  - nvidia
+
+dependencies:
+  - numpy
+  - pandas
+  - pytorch
+  - torchvision
+  - spikingjelly==0.0.0.0.14
+  - opencv-python
+  - imageio
+  - numba
+  - h5py
+  - hdf5plugin
+  - tqdm
+  - pyyaml
+  - pre-commit
+  - matplotlib
+  - progress
+  - mlflow
+  - timm==0.6.13
+  - einops
+  - cupy-cuda12x
+  - tables
