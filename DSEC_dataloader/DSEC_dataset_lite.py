@@ -56,11 +56,11 @@ class DSECDatasetLite(Dataset):
                     self.events_path = os.path.join(self.config['data']['path'], 'event_tensors', '{}frames'.format(str(self.num_frames_per_ts).zfill(2)))
                 else:
                     self.events_path = os.path.join(self.config['data']['path'], 'event_tensors',
-                                                    '{}bins_pol'.format(str(self.num_frames_per_ts).zfill(2)), 'left')
+                                                    '{}bins_pol'.format(str(self.num_frames_per_ts).zfill(2)))
 
 
             elif (self.input == "cnt"):
-                self.events_path = os.path.join(self.config['data']['path'], 'event_tensors', '{}frames'.format(str(self.num_frames_per_ts).zfill(2)),'left')
+                self.events_path = os.path.join(self.config['data']['path'], 'event_tensors', '{}frames'.format(str(self.num_frames_per_ts).zfill(2)))
 
 
         if self.num_chunks == 2:
