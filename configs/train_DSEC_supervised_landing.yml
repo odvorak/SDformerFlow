@@ -11,7 +11,7 @@ data:
 
 model:
     name: MS_SpikingformerFlowNet_en4
-    encoding: voxel # voxel/cnt/spike
+    encoding: cnt # voxel/cnt/spike
     norm_input: "minmax" # normalize input
     num_bins: 11 # num frame* chunks
     base_num_channels: 96

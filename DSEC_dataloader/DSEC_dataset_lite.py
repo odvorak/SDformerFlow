@@ -53,7 +53,7 @@ class DSECDatasetLite(Dataset):
         else:
             if (self.input == "voxel"):
                 if self.config['loader']['polarity']:
-                    self.events_path = os.path.join(self.config['data']['path'], 'event_tensors', '{}bins'.format(str(self.num_frames_per_ts).zfill(2)),'left')
+                    self.events_path = os.path.join(self.config['data']['path'], 'event_tensors', '{}frames'.format(str(self.num_frames_per_ts).zfill(2)))
                 else:
                     self.events_path = os.path.join(self.config['data']['path'], 'event_tensors',
                                                     '{}bins_pol'.format(str(self.num_frames_per_ts).zfill(2)), 'left')
