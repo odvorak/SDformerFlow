@@ -1850,10 +1850,10 @@ if __name__ == "__main__":
     torch.manual_seed(_seed_)
     torch.cuda.manual_seed_all(_seed_)
     # (batch_size, num_bins, num_polarities, height, width)
-    chunk = torch.rand([1, 10, 2, 240, 320])  # ( B, bin, C, H, W)
+    chunk = torch.rand([1, 10, 2, 128, 128])  # ( B, bin, C, H, W)
     spiking_kwargs = {"num_steps": 5, "v_reset": None, "v_th": 0.5,"neuron_type": "lif", "surrogate_fun": 'surrogate.ATan()', "tau": 2., "detach_reset": True, "spike_norm": "BN"}
     # model = MS_Spiking_PatchEmbed_Conv_sfn(img_size= (240,320),patch_size=(1, 1, 2, 2), in_chans=10, embed_dim=96,spiking_proj=True,**spiking_kwargs)
-    model = MS_PED_Spiking_PatchEmbed_Conv_sfn(img_size=(240, 320), patch_size=(1, 1, 2, 2), in_chans=10, embed_dim=96,
+    model = MS_PED_Spiking_PatchEmbed_Conv_sfn(img_size=(128, 128), patch_size=(1, 1, 2, 2), in_chans=10, embed_dim=96,
                                            spiking_proj=True, **spiking_kwargs)
     functional.reset_net(model)
     functional.set_step_mode(model, "m")
