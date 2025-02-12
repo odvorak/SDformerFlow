@@ -33,7 +33,7 @@ swin_transformer:
     swin_depths: [2,2,6,2]  #swin layers
     swin_num_heads: [ 3,6,12,24]
     swin_out_indices: [ 0,1,2,3]
-    swin_patch_size: [ 1,1,2,2 ] #spatio-temporal patch  T,P,H,W
+    swin_patch_size: [ 1,1,3,3 ] #spatio-temporal patch  T,P,H,W
     window_size: [ 2,9,9 ]
     pretrained_window_size: [ 0,0,0 ]
     mlp_ratio: 4
