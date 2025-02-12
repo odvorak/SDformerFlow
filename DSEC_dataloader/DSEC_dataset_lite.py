@@ -53,7 +53,7 @@ class DSECDatasetLite(Dataset):
         else:
             if (self.input == "voxel"):
                 if self.config['loader']['polarity']:
-                    self.events_path = os.path.join(self.config['data']['path'], 'event_tensors', '{}frames'.format(str(self.num_frames_per_ts).zfill(2)))
+                    self.events_path = os.path.join(self.config['data']['path'], 'event_tensors', '{}bins'.format(str(self.num_frames_per_ts).zfill(2)))
                 else:
                     self.events_path = os.path.join(self.config['data']['path'], 'event_tensors',
                                                     '{}bins_pol'.format(str(self.num_frames_per_ts).zfill(2)))
@@ -115,7 +115,7 @@ class DSECDatasetLite(Dataset):
         if self.config['data']['preprocessed']:
 
             # load preprocessed event cnt images/voxel representation
-            chunk = torch.from_numpy(np.load(os.path.join(self.events_path , target_file_1), allow_pickle=True))
+            chunk = torch.from_numpy(np.load(os.path.join(self.events_path , seq_folder1, target_file_1), allow_pickle=True))
             if self.num_chunks ==2:
                 eventsL2 = torch.from_numpy(np.load(os.path.join(self.events_path, seq_folder2, target_file_2), allow_pickle=True))
                 chunk = torch.cat((chunk, eventsL2), axis=0)
