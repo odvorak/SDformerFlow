@@ -18,13 +18,13 @@ imageio.plugins.freeimage.download()
 
 def generate_files(root: str, sequence: str, events_input: str, num_frames_per_ts: int = 1 ):
     #save flows
-    #flow_path = os.path.join(root, 'train', sequence, 'flow', 'forward')
-    flow_path = os.path.join(root, 'test', sequence, 'flow', 'forward')
+    flow_path = os.path.join(root, 'train', sequence, 'flow', 'forward')
+    #flow_path = os.path.join(root, 'test', sequence, 'flow', 'forward')
 
     save_path_flow = os.path.join(root, 'saved_flow_data', 'gt_tensors')
     save_path_mask = os.path.join(root, 'saved_flow_data', 'mask_tensors')
 
-    #_create_flow_maps(sequence, flow_path, save_path_flow, save_path_mask)
+    _create_flow_maps(sequence, flow_path, save_path_flow, save_path_mask)
 
 
     timestamps = np.loadtxt(os.path.join(root, 'train', sequence, 'flow', 'forward_timestamps.txt'), delimiter = ',', dtype='int64')
@@ -41,7 +41,7 @@ def generate_files(root: str, sequence: str, events_input: str, num_frames_per_t
     #save voxels
     if events_input == "voxel":
         save_path_events = os.path.join(root, 'saved_flow_data', 'event_tensors',  '{}bins_pol'.format(str(num_frames_per_ts).zfill(2)))
-        _load_events(sequence, num_frames_per_ts, eventsL_path, timestamps, save_path_events,events_input)
+        #_load_events(sequence, num_frames_per_ts, eventsL_path, timestamps, save_path_events,events_input)
 
     if events_input == "list":
         save_path_events = os.path.join(root, 'saved_flow_data', 'event_tensors',  '{}lists'.format(str(num_frames_per_ts).zfill(2)))
@@ -183,7 +183,7 @@ def _load_events(sequence, num_frames_per_ts, events_path, timestamps, save_path
                 t = (t - t[0]).astype('float32')
                 t = (t / t[-1])
 
-                voxel_grid = VoxelGrid((num_frames_per_ts, 480, 640))
+                voxel_grid = VoxelGrid((num_frames_per_ts, 200, 200))
 
                 pol = p.astype('float32')
                 event_data_torch = {
@@ -213,30 +213,30 @@ def _load_events(sequence, num_frames_per_ts, events_path, timestamps, save_path
 
 if __name__=='__main__':
     flow_sequences = [
-                        #'N1',
-                        #'N2',
+                        'N1',
+                        'N2',
                         'N3',
-                        #'N4',
-                        #'N5',
-                        #'N6',
-                        #'N7',
-                        #'N8',
-                        #'D1',
-                        #'D2',
-                        #'D3',
-                        #'D4',
-                        #'D5',
-                        #'D6',
-                        #'D7',
-                        #'D8',
-                        #'V1',
-                        #'V2',
-                        #'V3',
-                        #'V4',
-                        #'V5',
-                        #'V6',
-                        #'V7',
-                        #'V8'
+                        'N4',
+                        'N5',
+                        'N6',
+                        'N7',
+                        'N8',
+                        'D1',
+                        'D2',
+                        'D3',
+                        'D4',
+                        'D5',
+                        'D6',
+                        'D7',
+                        'D8',
+                        'V1',
+                        'V2',
+                        'V3',
+                        'V4',
+                        'V5',
+                        'V6',
+                        'V7',
+                        'V8'
                         ]
     test_sequences = ['N9',
                       'N10',
