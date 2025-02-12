@@ -1775,8 +1775,8 @@ class MS_PED_Spiking_PatchEmbed_Conv_sfn(nn.Module):
         """Forward function."""
         if x.size(1) > self.num_bins:
             x = x[:, :self.num_bins, :, :, :]
-        print('----- x -----', x.shape)
-        x = x.unsqueeze(1)
+        #print('----- x -----', x.shape) here
+        #x = x.unsqueeze(1)
         event_reprs = x.permute(0, 2, 3, 4, 1)
 
         new_event_reprs = torch.zeros(event_reprs.size(0), self.num_ch, event_reprs.size(2), event_reprs.size(3),
