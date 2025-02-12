@@ -234,9 +234,6 @@ def train(args, config_parser):
         # spiking_rates = collections.defaultdict(list)
         for chunk, mask, label in tqdm(train_dataloader):
 
-            print(f"Chunk shape: {chunk.shape}, Chunk numel: {chunk.numel()}")
-            print(f"Non-zero elements: {torch.count_nonzero(chunk)}")
-
             torch.autograd.set_detect_anomaly(True)
 
             functional.reset_net(model)
