@@ -79,12 +79,12 @@ loader:
     n_epochs: 60
     batch_size: 1
     batch_multiplyer: 1
-    resolution: [200, 200] # H x W origin resolution
+    resolution: [480, 640] # H x W origin resolution
     augment: ["Horizontal", "Vertical", "Polarity"]
     augment_prob: [0.5, 0.5, 0.]
     max_drop_rate: 0.6
     polarity: False  #use polarity as +-, False: plarity in channels For SNN: true: load bins false: load bins_pol
-    crop: [128,128]
+    crop: [288,384]
     gpu: 0
     n_workers: 4
     parallel: False
